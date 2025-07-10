@@ -25,7 +25,6 @@ form.addEventListener('submit', async e => {
   });
 
   if (res.ok) {
-    // ボタンテキストだけを書き換えて二度押しを防止
     const btn = form.querySelector('button[type="submit"]');
     btn.textContent = 'ご協力ありがとうございます';
     btn.disabled = true;
