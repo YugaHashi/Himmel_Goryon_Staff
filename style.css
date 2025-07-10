@@ -44,7 +44,7 @@ button:hover {
 }
 
 #thanks-image-container {
-  display: none;
+  display: none; /* 送信後も表示させない */
   margin-top: 30px;
   text-align: center;
 }
