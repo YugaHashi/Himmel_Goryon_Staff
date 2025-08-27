@@ -9,7 +9,7 @@
 </head>
 <body>
   <form id="survey-form">
-    <label for="staff">① 輝いていたスタッフはいましたか？</label>
+    <label for="staff">① 素敵なスタッフはいましたか？</label>
     <input list="staff-list" id="staff" name="staff" placeholder="スタッフ名を入力 or 選択" required>
     <datalist id="staff-list">
       <option value="ゆうが さん">
@@ -17,7 +17,7 @@
       <!-- 必要に応じて追加 -->
     </datalist>
 
-    <label for="rating">② 接客のレベルはどうか？</label>
+    <label for="rating">② 接客のレベルはどうでしたか？</label>
     <select id="rating" name="service_rating" required>
       <option value="">選択してください</option>
       <option value="3">非常に素晴らしい</option>
@@ -25,7 +25,7 @@
       <option value="1">普通だった</option>
     </select>
 
-    <label for="comments">③ 何を素晴らしいと感じましたか？</label>
+    <label for="comments">③ 何を良い点と感じましたか？</label>
     <textarea id="comments" name="comments" placeholder="ご意見・ご要望をご記入ください" required></textarea>
 
     <button type="submit">送信する</button>
