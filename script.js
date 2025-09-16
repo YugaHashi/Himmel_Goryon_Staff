@@ -6,8 +6,18 @@ const form = document.getElementById('survey-form');
 form.addEventListener('submit', async e => {
   e.preventDefault();
 
+  // 入力値を取得
+  let staffName = form.staff.value.trim();
+
+  // 敬称が付いていなければ「さん」を自動付与
+  const suffixes = ['君', 'くん', 'ちゃん', 'さん', '様', 'さま'];
+  const hasSuffix = suffixes.some(suffix => staffName.endsWith(suffix));
+  if (!hasSuffix && staffName !== '') {
+    staffName += 'さん';
+  }
+
   const data = {
-    staff: form.staff.value,
+    staff: staffName,
     service_rating: form.service_rating.value,
     comments: form.comments.value,
     created_at: new Date().toISOString()
